@@ -32,7 +32,7 @@ Edit your `moon.pkg.json`:
   ],
   "link": {
     "native": {
-      "cc-link-flags": "-ltchproxy -Wl,-rpath,$HOME/.moon/lib"
+      "cc-link-flags": "-ltchproxy"
     }
   }
 }
