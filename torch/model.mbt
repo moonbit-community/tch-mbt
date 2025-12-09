@@ -11,7 +11,7 @@ pub fn load_model_from_file(path : String) -> Model {
 }
 
 ///|
-pub fn forward[U, V](self : Model, input : Tensor[U]) -> Tensor[V] {
+pub fn[U, V] Model::forward(self : Model, input : Tensor[U]) -> Tensor[V] {
   let object = forward_ffi(self.object, input.object)
   { object, }
 }
