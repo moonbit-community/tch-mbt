@@ -13,6 +13,9 @@ cd build
 cmake ..
 make -j
 cp libtchproxy.so "$HOME/.moon/lib"
+# Create symlink for linker to find the library during build
+sudo ln -sf "$HOME/.moon/lib/libtchproxy.so" /usr/local/lib/libtchproxy.so
+sudo ldconfig
 
 # test
 cd "$SCRIPT_DIR"
