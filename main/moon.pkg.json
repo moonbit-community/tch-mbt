@@ -8,7 +8,7 @@
   ],
   "link": {
     "native": {
-      "cc-link-flags": "-L/root/.moon/lib -ltchproxy -Wl,-rpath,/root/.moon/lib"
+      "cc-link-flags": "-L$HOME/.moon/lib -ltchproxy -Wl,-rpath,$HOME/.moon/lib"
     }
   }
 }
