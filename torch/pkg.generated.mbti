@@ -1,0 +1,71 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "liuly0322/tch_mbt/torch"
+
+// Values
+pub fn load_model_from_file(String) -> Model
+
+pub fn[T : Element] tensor_from_array(Array[T]) -> Tensor[T]
+
+pub fn[T : Element] tensor_from_file(String) -> Tensor[T]
+
+// Errors
+
+// Types and methods
+pub enum ElementKind {
+  Int16
+  Int
+  Int64
+  Float
+  Double
+}
+
+pub struct Model {
+  object : ModelObject
+}
+pub fn[U, V] Model::forward(Self, Tensor[U]) -> Tensor[V]
+
+type ModelObject
+
+pub struct Tensor[T] {
+  object : TensorObject
+}
+pub fn[T] Tensor::abs(Self[T]) -> Self[T]
+pub fn[T] Tensor::argmax(Self[T]) -> Self[Int64]
+pub fn[T] Tensor::argmin(Self[T]) -> Self[Int64]
+pub fn[T, U] Tensor::exp(Self[T]) -> Self[U]
+pub fn[T : Element] Tensor::get_raw_data(Self[T]) -> Array[T]
+pub fn[T] Tensor::length(Self[T]) -> Int
+pub fn[T, U] Tensor::log(Self[T]) -> Self[U]
+pub fn[T] Tensor::matmul(Self[T], Self[T]) -> Self[T]
+pub fn[T] Tensor::op_add(Self[T], Self[T]) -> Self[T]
+pub fn[T] Tensor::op_mul(Self[T], Self[T]) -> Self[T]
+pub fn[T] Tensor::op_neg(Self[T]) -> Self[T]
+pub fn[T] Tensor::op_sub(Self[T], Self[T]) -> Self[T]
+pub fn[T] Tensor::reshape(Self[T], Array[Int]) -> Self[T]
+pub fn[T] Tensor::shape(Self[T]) -> Array[Int]
+pub fn[T] Tensor::transpose(Self[T]) -> Self[T]
+pub impl[T] Add for Tensor[T]
+pub impl[T] Eq for Tensor[T]
+pub impl[T] Mul for Tensor[T]
+pub impl[T] Neg for Tensor[T]
+pub impl[T : Element + Show] Show for Tensor[T]
+pub impl[T] Sub for Tensor[T]
+
+type TensorObject
+
+// Type aliases
+
+// Traits
+pub(open) trait Element {
+  kind(Self) -> ElementKind
+  elt_size_in_bytes(Self) -> UInt = _
+  c_int(Self) -> Int = _
+  bytes(Array[Self]) -> Bytes
+  to_vec(Bytes) -> Array[Self]
+}
+pub impl Element for Int
+pub impl Element for Int16
+pub impl Element for Int64
+pub impl Element for Float
+pub impl Element for Double
+
