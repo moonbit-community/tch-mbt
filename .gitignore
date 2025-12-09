@@ -6,3 +6,4 @@ dev
 mycc
 .clangd
 libtorch
+libtorch-shared-with-deps-latest.zip
