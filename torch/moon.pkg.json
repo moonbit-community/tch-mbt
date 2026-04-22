@@ -1,8 +1,0 @@
-{
-    "link": {
-        "native": {
-            "cc-link-flags": "-ltchproxy"
-        }
-    },
-    "warn-list": "-5"
-}
