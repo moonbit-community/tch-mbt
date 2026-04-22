@@ -214,27 +214,27 @@ pub fn op_neg[T](self : Tensor[T]) -> Tensor[T] {
 }
 
 ///|
-pub impl[T] Eq for Tensor[T] with op_equal(self : Tensor[T], other : Tensor[T]) {
+pub impl[T] Eq for Tensor[T] with equal(self : Tensor[T], other : Tensor[T]) {
   equal_tensors_ffi(self.object, other.object) == 1
 }
 
 ///|
-pub impl[T] Add for Tensor[T] with op_add(self : Tensor[T], other : Tensor[T]) {
+pub impl[T] Add for Tensor[T] with add(self : Tensor[T], other : Tensor[T]) {
   self.op_add(other)
 }
 
 ///|
-pub impl[T] Sub for Tensor[T] with op_sub(self : Tensor[T], other : Tensor[T]) {
+pub impl[T] Sub for Tensor[T] with sub(self : Tensor[T], other : Tensor[T]) {
   self.op_sub(other)
 }
 
 ///|
-pub impl[T] Mul for Tensor[T] with op_mul(self : Tensor[T], other : Tensor[T]) {
+pub impl[T] Mul for Tensor[T] with mul(self : Tensor[T], other : Tensor[T]) {
   self.op_mul(other)
 }
 
 ///|
-pub impl[T] Neg for Tensor[T] with op_neg(self : Tensor[T]) {
+pub impl[T] Neg for Tensor[T] with neg(self : Tensor[T]) {
   self.op_neg()
 }
 
