@@ -6,7 +6,7 @@ pub fn load_model_from_file(String) -> Model
 
 pub fn[T : Element] tensor_from_array(Array[T]) -> Tensor[T]
 
-pub fn[T : Element] tensor_from_file(String) -> Tensor[T]
+pub fn[T] tensor_from_file(String) -> Tensor[T]
 
 // Errors
 
