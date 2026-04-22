@@ -92,12 +92,7 @@ fn int_array_to_bytes(ints : Array[Int]) -> Bytes {
 fn bytes_to_int_16_array(bytes : Bytes) -> Array[Int16] {
   let n = bytes.length() / 2
   let ints : Array[Int16] = Array::new(capacity=n)
-  for i in 0..<n {
-    // let i = i * 2
-    // let int = bytes[i].to_uint() + (bytes[i + 1].to_uint() << 8)
-    // TODO: FIXME
-    // ints.push(int.reinterpret_as_int16())
-  }
+  // TODO: implement Int16 decoding.
   ints
 }
 
