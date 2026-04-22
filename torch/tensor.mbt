@@ -58,6 +58,7 @@ impl Element with elt_size_in_bytes(self) {
 }
 
 // These values should be in sync with include/c10/core/ScalarType.h
+
 ///|
 impl Element with c_int(self) {
   match self.kind() {
@@ -326,7 +327,7 @@ fn[T] at_tensor_of_data(
   dims : Array[Int],
   ndims : UInt,
   element_size_in_bytes : UInt,
-  _type : Int
+  _type : Int,
 ) -> Tensor[T] {
   let dims = dims.map(fn(x) { x.to_int64() }) |> int_64_array_to_bytes
   let object = at_tensor_of_data_ffi(

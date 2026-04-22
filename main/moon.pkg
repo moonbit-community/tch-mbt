@@ -1,0 +1,8 @@
+import {
+  "liuly0322/tch_mbt/torch" @torch,
+}
+
+options(
+  "is-main": true,
+  link: { "native": { "cc-link-flags": "-ltchproxy" } },
+)
