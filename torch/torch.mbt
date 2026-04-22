@@ -17,7 +17,8 @@ test "inference" {
   for i in 0..<5 {
     let filename = "python_examples/mnist/samples/mnist_" + cases[i] + ".pt"
     let input : Tensor[Float] = tensor_from_file(filename).reshape(input_shape)
-    let output = model.forward(input).argmax().get_raw_data()[0]
+    let output : Tensor[Float] = model.forward(input)
+    let output = output.argmax().get_raw_data()[0]
     assert_eq(output, expected_answers[i].to_int64())
   }
 }
