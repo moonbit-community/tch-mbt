@@ -1,3 +1,7 @@
+import {
+  "moonbitlang/core/debug",
+}
+
 warnings = "-5"
 
 options(

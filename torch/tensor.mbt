@@ -454,7 +454,7 @@ test "tensor_length" {
 test "tensor_shape" {
   let tensor_a = tensor_from_array([1.0, 2.0, 3.0, 4.0, 5.0, 6.0])
   let shape = tensor_a.shape()
-  inspect(shape, content="[6]")
+  @debug.debug_inspect(shape, content="[6]")
 }
 
 ///|
