@@ -312,7 +312,7 @@ pub impl[T : Element + Show] Show for Tensor[T] with output(self, logger) {
       index = index / dim
     }
     logger.write_string("[".repeat(left_cnt))
-    logger.write_string(vec[i].to_string())
+    logger.write_string(Show::to_string(vec[i]))
     logger.write_string("]".repeat(right_cnt))
     if i < n - 1 {
       logger.write_string(", ")
@@ -454,7 +454,7 @@ test "tensor_length" {
 test "tensor_shape" {
   let tensor_a = tensor_from_array([1.0, 2.0, 3.0, 4.0, 5.0, 6.0])
   let shape = tensor_a.shape()
-  inspect(shape, content="[6]")
+  debug_inspect(shape, content="[6]")
 }
 
 ///|

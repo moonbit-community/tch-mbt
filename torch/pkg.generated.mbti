@@ -30,19 +30,27 @@ pub struct Tensor[T] {
   object : TensorObject
 }
 pub fn[T] Tensor::abs(Self[T]) -> Self[T]
+pub fn[T] Tensor::add(Self[T], Self[T]) -> Self[T]
 pub fn[T] Tensor::argmax(Self[T]) -> Self[Int64]
 pub fn[T] Tensor::argmin(Self[T]) -> Self[Int64]
+pub fn[T] Tensor::equal(Self[T], Self[T]) -> Bool
 pub fn[T, U] Tensor::exp(Self[T]) -> Self[U]
 pub fn[T : Element] Tensor::get_raw_data(Self[T]) -> Array[T]
 pub fn[T] Tensor::length(Self[T]) -> Int
 pub fn[T, U] Tensor::log(Self[T]) -> Self[U]
 pub fn[T] Tensor::matmul(Self[T], Self[T]) -> Self[T]
+pub fn[T] Tensor::mul(Self[T], Self[T]) -> Self[T]
+pub fn[T] Tensor::neg(Self[T]) -> Self[T]
+pub fn[T] Tensor::not_equal(Self[T], Self[T]) -> Bool
 pub fn[T] Tensor::op_add(Self[T], Self[T]) -> Self[T]
 pub fn[T] Tensor::op_mul(Self[T], Self[T]) -> Self[T]
 pub fn[T] Tensor::op_neg(Self[T]) -> Self[T]
 pub fn[T] Tensor::op_sub(Self[T], Self[T]) -> Self[T]
+pub fn[T : Element + Show] Tensor::output(Self[T], &Logger) -> Unit
 pub fn[T] Tensor::reshape(Self[T], Array[Int]) -> Self[T]
 pub fn[T] Tensor::shape(Self[T]) -> Array[Int]
+pub fn[T] Tensor::sub(Self[T], Self[T]) -> Self[T]
+pub fn[T : Element + Show] Tensor::to_string(Self[T]) -> String
 pub fn[T] Tensor::transpose(Self[T]) -> Self[T]
 pub impl[T] Add for Tensor[T]
 pub impl[T] Eq for Tensor[T]
@@ -68,4 +76,3 @@ pub impl Element for Int16
 pub impl Element for Int64
 pub impl Element for Float
 pub impl Element for Double
-
