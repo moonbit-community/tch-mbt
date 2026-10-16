@@ -1,0 +1,15 @@
+name = "liuly0322/tch_mbt"
+
+version = "0.2.0"
+
+preferred_target = "native"
+
+readme = "README.md"
+
+repository = "https://github.com/liuly0322/tch-mbt"
+
+license = "Apache-2.0"
+
+keywords = [ ]
+
+description = "libtorch FFI bindings(WIP) for MoonBit"
